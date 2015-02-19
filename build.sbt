@@ -23,10 +23,11 @@ lazy val commonSettings = Seq(
     "-Xfuture"
   ),
   libraryDependencies ++= Seq(
-    "org.spire-math" %% "algebra" % "0.2.0-SNAPSHOT" from "http://plastic-idolatry.com/jars/algebra_2.11-0.2.0-SNAPSHOT.jar"
+    "org.spire-math" %% "spire" % "0.9.0",
+    "org.typelevel" %% "machinist" % "0.2.2",
+    "com.chuusai" %% "shapeless" % "2.1.0"
   ),
-  scmInfo := Some(ScmInfo(url("https://github.com/arahuja/sbp-testbed"),
-    "git@github.com:arahuja/sbp-testbed.git"))
+  scmInfo := Some(ScmInfo(url("https://github.com/arahuja/sbp-testbed"), "git@github.com:arahuja/sbp-testbed.git"))
 )
 
 lazy val settings = buildSettings ++ commonSettings
